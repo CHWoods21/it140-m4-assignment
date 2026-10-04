@@ -1,6 +1,6 @@
 # IT 140 Module Four Assignment
 # Higher/Lower Game Pseudocode Template
-#
+#CHARLES WOODS
 # Complete the TODO prompts below with your own pseudocode.
 # Keep this file in .pseudo format for submission.
 #
@@ -10,20 +10,44 @@
 
 START hilow_game
 
-    # Establish a valid guessing range.
-    TODO: Obtain the lower and upper bounds.
-    TODO: Repeat as needed until the bounds satisfy the requirement.
+Get lowerBound
+Get upperBound
 
-    # Establish the number the player is trying to guess.
-    TODO: Generate the required random number from the valid range.
+WHILE lowerBound >= upperbound
+    PUT "Invalid bounds, The lowerBound" 
+    GET lowerBound
+    GET upperBound
+ENDWHILE
 
-    # Play the game.
-    TODO: Obtain and validate a guess using the selected bounds.
-    TODO: Repeat the required game behavior until the correct guess.
-        TODO: Compare a valid guess and provide the required feedback.
-        TODO: Obtain and validate another guess when play continues.
+LET numberToGuess  = "The number 7."
+
+GET guess
+
+WHILE guess < lowerBound OR guess > upperBound
+    PUT "Invalid guess. Enter a number between the lowerBound and upperBound."
+    GET guess
+ENDWHILE
+
+WHILE guess != randomNumber
+
+    IF guess < randomNumber THEN 
+        PUT "Your guess is too low."
+    Else:
+        PUT: "Your guess is too high."
+    ENDIF
+    GETGUESS
+    WHILE guess < lowerBound OR guess > upperBound
+        PUT "Invalid guess. Enter a numberbetween the lowerBound and upperBound."
+        GET guess
+    ENDWHILE
+ENDWHILE
+PUT "Congratulations! You guessed correctly."
+
+END
+        
+
+   
 
 END hilow_game
 
-# === References ===
-# TODO: Add references for sources you used, or delete this line if unused.
+
